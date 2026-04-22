@@ -1,0 +1,42 @@
+{
+  "name": "lpj-ins-file",
+  "displayName": "LPJ-GUESS Instruction File",
+  "description": "Syntax highlighting support for LPJ-GUESS .ins instruction files.",
+  "version": "0.0.1",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hie-dave/vscode-lpj-ins.git"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "lpj-ins",
+        "aliases": [
+          "LPJ Instruction",
+          "lpj-ins"
+        ],
+        "extensions": [
+          ".ins"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "lpj-ins",
+        "scopeName": "source.lpj-ins",
+        "path": "./syntaxes/lpj-ins.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.9.1"
+  }
+}

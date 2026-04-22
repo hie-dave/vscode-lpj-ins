@@ -1,0 +1,145 @@
+{
+  "name": "LPJ Instruction",
+  "scopeName": "source.lpj-ins",
+  "patterns": [
+    {
+      "include": "#comment"
+    },
+    {
+      "include": "#blockHeaders"
+    },
+    {
+      "include": "#paramName"
+    },
+    {
+      "include": "#directiveKeywords"
+    },
+    {
+      "include": "#types"
+    },
+    {
+      "include": "#assignmentKey"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#parens"
+    }
+  ],
+  "repository": {
+    "comment": {
+      "patterns": [
+        {
+          "name": "comment.line.exclamation.lpj-ins",
+          "match": "(^|\\s)!.*$"
+        }
+      ]
+    },
+    "blockHeaders": {
+      "patterns": [
+        {
+          "name": "meta.block.header.lpj-ins",
+          "match": "\\b(group|pft|st|mt)\\b\\s+(\"[^\"]+\"|'[^']+')",
+          "captures": {
+            "1": {
+              "name": "keyword.control.directive.lpj-ins"
+            },
+            "2": {
+              "name": "entity.name.type.lpj-ins"
+            }
+          }
+        }
+      ]
+    },
+    "paramName": {
+      "patterns": [
+        {
+          "name": "meta.parameter.declaration.lpj-ins",
+          "match": "\\b(param)\\b\\s+(\"[^\"]+\"|'[^']+')",
+          "captures": {
+            "1": {
+              "name": "keyword.control.directive.lpj-ins"
+            },
+            "2": {
+              "name": "variable.parameter.lpj-ins"
+            }
+          }
+        }
+      ]
+    },
+    "directiveKeywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.directive.lpj-ins",
+          "match": "\\b(import|include|param|group|pft|st|mt)\\b"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "name": "storage.type.lpj-ins",
+          "match": "\\b(str|int|float|double|bool)\\b"
+        }
+      ]
+    },
+    "assignmentKey": {
+      "patterns": [
+        {
+          "name": "variable.other.assignment.lpj-ins",
+          "match": "^\\s*([A-Za-z_][A-Za-z0-9_]*)\\b"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.lpj-ins",
+          "match": "(?<![A-Za-z0-9_])[-+]?(?:\\d+\\.\\d*|\\.\\d+|\\d+)(?:[eE][-+]?\\d+)?(?![A-Za-z0-9_])"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.lpj-ins",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.lpj-ins",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.lpj-ins",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.lpj-ins",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "parens": {
+      "patterns": [
+        {
+          "name": "punctuation.section.parens.begin.lpj-ins",
+          "match": "[\\(\\{\\[]"
+        },
+        {
+          "name": "punctuation.section.parens.end.lpj-ins",
+          "match": "[\\)\\}\\]]"
+        }
+      ]
+    }
+  }
+}
