@@ -3,7 +3,7 @@
   "displayName": "LPJ-GUESS Instruction File",
   "description": "Syntax highlighting support for LPJ-GUESS .ins instruction files.",
   "version": "0.0.1",
-  "publisher": "local",
+  "license": "SEE LICENSE IN COPYING",
   "engines": {
     "vscode": "^1.80.0"
   },
