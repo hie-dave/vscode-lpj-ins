@@ -43,7 +43,7 @@
       "patterns": [
         {
           "name": "meta.block.header.lpj-ins",
-          "match": "\\b(group|pft|st|mt)\\b\\s+(\"[^\"]+\"|'[^']+')",
+          "match": "\\b(group|pft|st|mt|file)\\b\\s+(\"[^\"]+\"|'[^']+')",
           "captures": {
             "1": {
               "name": "keyword.control.directive.lpj-ins"
@@ -75,7 +75,7 @@
       "patterns": [
         {
           "name": "keyword.control.directive.lpj-ins",
-          "match": "\\b(import|include|param|group|pft|st|mt)\\b"
+          "match": "\\b(import|include|param|group|pft|st|mt|file)\\b"
         }
       ]
     },
