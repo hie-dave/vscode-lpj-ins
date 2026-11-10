@@ -1,5 +1,7 @@
 # LPJ-GUESS Instruction File (.ins) Support for Visual Studio Code
 
+[![CI/CD](https://github.com/hie-dave/vscode-lpj-ins/actions/workflows/ci.yml/badge.svg)](https://github.com/hie-dave/vscode-lpj-ins/actions/workflows/ci.yml)
+
 A minimal VS Code language extension for LPJ-GUESS instruction files (`*.ins`).
 
 This extension provides syntax highlighting for LPJ-GUESS instruction files,
